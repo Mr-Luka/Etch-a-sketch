@@ -53,3 +53,11 @@ function draw({ key }) {
   ctx.lineTo(x, y);
   ctx.stroke();
 }
+
+// write a handler for the keys
+function handleKey(e) {
+  if (e.key.includes('Arrow')) {
+    e.preventDefault();
+    draw({ key: e.key });
+  }
+}
