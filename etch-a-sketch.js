@@ -33,3 +33,23 @@ function draw({ key }) {
   // start the path
   ctx.beginPath();
   ctx.moveTo(x, y);
+    // move our x and y values depending on what the user did
+  switch (key) {
+    case 'ArrowUp':
+      y -= MOVE_AMOUNT;
+      break;
+    case 'ArrowRight':
+      x += MOVE_AMOUNT;
+      break;
+    case 'ArrowDown':
+      y += MOVE_AMOUNT;
+      break;
+    case 'ArrowLeft':
+      x -= MOVE_AMOUNT;
+      break;
+    default:
+      break;
+  }
+  ctx.lineTo(x, y);
+  ctx.stroke();
+}
