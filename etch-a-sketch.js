@@ -21,3 +21,15 @@ ctx.beginPath(); // start the drawing
 ctx.moveTo(x, y);
 ctx.lineTo(x, y);
 ctx.stroke();
+
+
+// write a draw function
+function draw({ key }) {
+  // increment the hue
+  hue += 1;
+  console.log(hue);
+  ctx.strokeStyle = `hsl(${Math.random() * 360}, 100%, 50%)`;
+  console.log(key);
+  // start the path
+  ctx.beginPath();
+  ctx.moveTo(x, y);
