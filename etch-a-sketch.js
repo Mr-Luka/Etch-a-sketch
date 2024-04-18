@@ -6,3 +6,18 @@ const MOVE_AMOUNT = 50;
 // Setup our canvas for drawing
 // make a variable called height and width from the same properties on our canvas.
 const { width, height } = canvas;
+
+let x = Math.floor(Math.random() * width);
+let y = Math.floor(Math.random() * height);
+// create random x and y starting points on the canvas
+
+ctx.lineJoin = 'round';
+ctx.lineCap = 'round';
+ctx.lineWidth = MOVE_AMOUNT;
+
+let hue = 0;
+ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+ctx.beginPath(); // start the drawing
+ctx.moveTo(x, y);
+ctx.lineTo(x, y);
+ctx.stroke();
